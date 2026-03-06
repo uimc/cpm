@@ -1,0 +1,318 @@
+/* Font Face Declarations */
+@font-face {
+    font-family: "Perfectly Nineties Regular";
+    src: url("../fonts/Perfectly Nineties Regular/perfectly-nineties-regular.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Olivie Sans";
+    src: url("../fonts/Olivie Sans/OlivieSans-Regular.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Homemade Apple";
+    src: url("../fonts/Homemade Apple/HomemadeApple-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Global Styles */
+:root {
+    --d1-color: #968C39;
+    --d2-color: #A51D2F;
+    --l1-color: #ECD1D5;
+    --l2-color: #faf9cd;
+    --d3-color: #96416A;
+    --l3-color: #968C39;
+}
+
+body {
+    font-family: "Perfectly Nineties Regular", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.6;
+    color: var(--d1-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Olivie Sans", serif;
+}
+
+/* Navigation */
+.navbar {
+    background-color: rgba(250, 249, 205, 1);
+    backdrop-filter: blur(10px);
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    font-family: "Olivie Sans", sans-serif;
+    font-size: 2.5rem;
+    color: var(--d3-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: inherit;
+}
+
+/* Desktop navbar - centered layout */
+@media (min-width: 992px) {
+    .navbar .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .navbar-brand {
+        text-align: center;
+        margin: 0 auto;
+    }
+    
+    .navbar-toggler {
+        display: none;
+    }
+    
+    .navbar-collapse {
+        display: flex !important;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .navbar-nav {
+        margin: 0 auto !important;
+        flex-direction: row;
+    }
+}
+
+/* Center mobile menu items */
+@media (max-width: 992px) {
+    .navbar .container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .navbar-brand {
+        flex: 0 0 auto;
+        margin-right: auto;
+        font-size: 1.75rem;
+        white-space: nowrap;
+        padding-left: 0.75rem;
+    }
+    
+    .navbar-toggler {
+        flex: 0 0 auto;
+        margin-left: auto;
+        order: 2;
+    }
+    
+    .navbar-collapse {
+        flex-basis: 100%;
+        flex-grow: 1;
+        align-items: center;
+        text-align: center;
+        padding-top: 1rem;
+        order: 3;
+    }
+    
+    .navbar-nav {
+        margin: 0 auto;
+    }
+    
+    .nav-item {
+        margin: 0.5rem 0;
+    }
+}
+
+/* Hamburger menu styles */
+.navbar-toggler {
+    border: none;
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%2396416A' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Link Styles */
+.nav-link, footer a {
+    font-family: "Perfectly Nineties Regular", sans-serif;
+    font-weight: 500;
+    margin: 0 0.5rem;
+    padding: 0.5rem 1rem !important;
+    transition: all 0.3s ease;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.15rem;
+}
+
+.nav-link {
+    color: var(--d3-color) !important;
+}
+
+.nav-link:hover {
+    background-color: var(--d3-color);
+    color: var(--l2-color) !important;
+}
+
+/* Hero Section */
+#hero {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--l2-color);
+    color: var(--d3-color);
+}
+
+#hero img {
+    width: auto;
+    height: 45rem;
+    display: block;
+    margin: 0 auto;
+    padding-top: 8rem;
+    padding-bottom: 1.5rem;
+}
+
+#hero h1 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 1.15rem;
+    margin-top: 1.5rem;
+    font-family: "Olivie Sans", sans-serif;
+}
+
+#hero .lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: "Perfectly Nineties Regular", sans-serif;
+}
+
+#countdown-text {
+    font-weight: 700;
+}
+
+.color-combo-1 {
+    background-color: var(--d1-color);
+    color: var(--l2-color);
+}
+
+.color-combo-1 .btn {
+    background-color: var(--d1-color);
+    color: var(--l2-color);
+    border-radius: 50px;
+    padding: 0.75rem 2rem;
+    font-weight: 500;
+    font-size: 1.25rem;
+    transition: all 0.3s ease;
+    text-shadow: none;
+    border-radius: 50px;
+    border-width: 2px;
+    border-color: var(--l2-color);
+}
+.color-combo-1 .btn:hover {
+    background-color: var(--l2-color);
+    color: var(--d1-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.color-combo-2 {
+    background-color: var(--l2-color);
+    color: var(--d3-color);
+}
+
+.color-combo-3 {
+    background-color: var(--d2-color);
+    color: var(--l2-color);
+}
+
+#faq .container {
+    margin-top: 10rem;
+}
+
+#story, #faq .container {
+    padding: 0 2rem;
+}
+
+/* Footer */
+footer {
+    background-color: var(--d3-color);
+    color: var(--l2-color);
+}
+
+footer ul li {
+    margin-bottom: 0.75rem;
+}
+
+footer a {
+    transition: all 0.3s ease;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    color: var(--l2-color);
+}
+
+footer a:hover {
+    background-color: var(--l2-color);
+    color: var(--d2-color);
+}
+
+/* Image Carousel */
+.image-carousel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    /* Match surrounding section background to avoid visible gap lines */
+    background-color: var(--d1-color);
+}
+
+.image-carousel-track {
+    display: flex;
+    gap: 0;
+    width: fit-content;
+    /* Improve compatibility with iOS Safari during transforms */
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
+}
+
+.carousel-image {
+    height: 400px;
+    width: auto;
+    object-fit: cover;
+    flex-shrink: 0;
+    display: block;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(-50%, 0, 0);
+    }
+}
+
+/* Responsive mobile Design */
+@media (max-width: 768px) {
+
+    #hero img {
+        width: 100%;
+        height: auto;
+    }
+
+    #faq .container {
+        margin-top: 5rem;
+    }
+
+}
