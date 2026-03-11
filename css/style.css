@@ -237,11 +237,11 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--l2-color);
 }
 
-#faq .container {
+#spacer .container {
     margin-top: 10rem;
 }
 
-#story, #faq .container {
+#story, #spacer .container {
     padding: 0 2rem;
 }
 
@@ -311,7 +311,7 @@ footer a:hover {
         height: auto;
     }
 
-    #faq .container {
+    #spacer .container {
         margin-top: 5rem;
     }
 
