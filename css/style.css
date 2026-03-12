@@ -49,6 +49,9 @@ h1, h2, h3, h4, h5, h6 {
     backdrop-filter: blur(10px);
     padding: 1rem 0;
     transition: all 0.3s ease;
+    border-bottom: 2px solid var(--d3-color);
+    border-radius: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-brand {
@@ -243,6 +246,10 @@ h1, h2, h3, h4, h5, h6 {
 
 #story, #spacer .container {
     padding: 0 2rem;
+}
+
+#food-div h5 span, #hotel-div h5 span {
+    font-size: 0.6em;
 }
 
 /* Footer */
